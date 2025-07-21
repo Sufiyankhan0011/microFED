@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "searchBar",
+      name: "sharedModules",
       filename: "remoteEntry.js",
       remotes: {
         Shell: "shell@http://localhost:3004/remoteEntry.js"

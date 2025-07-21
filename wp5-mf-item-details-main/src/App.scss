@@ -1,34 +1,71 @@
-.item-details-container {
-    .mr-10 {
-        margin-right: 10px;
-    }
-    a {
-        text-decoration: underline;
-    }
-    .item-box-container {
-        margin-top: 50px;
-        display: flex;
-        height: 500px;
-        flex-wrap: wrap;
-        row-gap: 20px;
-        column-gap: 20px;
-    }
-    .item-box {
-        width: 400px;
-        border: 1px solid #eee;
-        padding: 10px;
-    }
-    img {
-        width: 200px;
-        height: 200px;
-    }
-    .tag {
-        margin-right: 10px;
-    }
-    .label {
-        color: #0071dc;
-    }
-    .mb-10 {
-        margin-bottom: 10px;
-    }
+// /* Existing styles remain untouched */
+// .item-details-container {
+//   .mr-10 {
+//     margin-right: 10px;
+//   }
+//   a {
+//     text-decoration: underline;
+//   }
+//   .item-box-container {
+//     margin-top: 50px;
+//     display: flex;
+//     height: 500px;
+//     flex-wrap: wrap;
+//     row-gap: 20px;
+//     column-gap: 20px;
+//   }
+//   .item-box {
+//     width: 400px;
+//     border: 1px solid #eee;
+//     padding: 10px;
+//   }
+//   img {
+//     width: 200px;
+//     height: 200px;
+//   }
+//   .tag {
+//     margin-right: 10px;
+//   }
+//   .label {
+//     color: #0071dc;
+//   }
+//   .mb-10 {
+//     margin-bottom: 10px;
+//   }
+// }
+
+/* New styles for layout */
+.app-container {
+  padding: 0; /* Remove padding to allow LeftNav to stick left */
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.layout-wrapper > div:first-child {
+  width: 250px; /* Sidebar width */
+  background-color: #000; /* Optional: ensure sidebar color fills fully */
+  color: white;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.main-content {
+  flex: 1;
+  padding-left: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  // gap: 1rem;
 }

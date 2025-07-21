@@ -54,7 +54,9 @@ module.exports = {
       name: "itemDetails",
       filename: "remoteEntry.js",
       remotes: {
-        Shell: "shell@http://localhost:3004/remoteEntry.js"
+        Shell: "shell@http://localhost:3004/remoteEntry.js",
+        SharedModules: "sharedModules@http://localhost:3005/remoteEntry.js"
+
       },
       exposes: {
         "./ItemDetails": "./src/App.js"

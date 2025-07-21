@@ -1,5 +1,5 @@
 {
-  "name": "wp5-mf-searchbar-main",
+  "name": "wp5-mf-sharedmodules-main",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -11,6 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
+    publish_dir: dist
   },
   devServer: {
     port: 3004,
@@ -48,7 +50,7 @@ module.exports = {
           TopNav: "topNavigation@http://localhost:3002/remoteEntry.js",
           ItemDetails: "itemDetails@http://localhost:3003/remoteEntry.js",
           Shell: "shell@http://localhost:3004/remoteEntry.js",
-          SearchBar: "searchBar@http://localhost:3005/remoteEntry.js",
+          SharedModules: "sharedModules@http://localhost:3005/remoteEntry.js",
       },
       exposes: {
          "./store": "./src/redux/store.js"
@@ -71,6 +73,10 @@ module.exports = {
           requiredVersion: dependencies["@mui/icons-material"]
         },
       }
-    })
+    }),
+    new WorkboxPlugin.GenerateSW({
+    clientsClaim: true,
+    skipWaiting: true,
+  }),
   ],
 };

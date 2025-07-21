@@ -53,7 +53,10 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "topNavigation",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        Shell: "shell@http://localhost:3004/remoteEntry.js",
+        SharedModules: "sharedModules@http://localhost:3005/remoteEntry.js"
+      },
       exposes: {
         "./TopNav": "./src/App.js"
       },

@@ -1,0 +1,35 @@
+// src/App.scss
+.two-column-layout {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  padding: 20px;
+}
+
+.header-row {
+  display: flex;
+  font-weight: bold;
+  border-bottom: 2px solid #444;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.left-header,
+.left-column {
+  width: 200px;
+  padding-right: 10px;
+  color: #333;
+}
+
+.right-header,
+.right-column {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
