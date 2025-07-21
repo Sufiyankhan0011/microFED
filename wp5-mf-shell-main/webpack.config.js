@@ -11,8 +11,7 @@ module.exports = {
   mode: "development",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
-    publish_dir: dist
+    filename: "main.js"
   },
   devServer: {
     port: 3004,
